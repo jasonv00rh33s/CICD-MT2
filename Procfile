@@ -1,1 +1,1 @@
-web: gunicorn <назва_папки_з_settings>.wsgi
+web: gunicorn project_recipe.wsgi
