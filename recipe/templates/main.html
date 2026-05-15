@@ -7,6 +7,14 @@
       <div class="card my-4">
         <div class="card-body">
           <h5 class="card-title">{{ recipe.title }}</h5>
+          
+          <p class="card-text">
+            <strong>Category:</strong> 
+            <a href="{% url 'category_detail' recipe.category.id %}">
+              {{ recipe.category.name }}
+            </a>
+          </p>
+
           <p class="card-text">{{ recipe.description }}</p>
           <p class="card-text"><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
           <p class="card-text"><strong>Instructions:</strong> {{ recipe.instructions }}</p>
