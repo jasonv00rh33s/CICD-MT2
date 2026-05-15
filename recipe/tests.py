@@ -10,11 +10,11 @@ class RecipeViewTests(TestCase):
             category=self.category
         )
 
-def test_main_view_status_code(self):
-        response = self.client.get(reverse('main'))
-        self.assertEqual(response.status_code, 200)
+    def test_main_view_status_code(self):
+            response = self.client.get(reverse('main'))
+            self.assertEqual(response.status_code, 200)
 
-def test_category_detail_view_status_code(self):
-        response = self.client.get(reverse('category_detail', args=[self.category.id]))
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Cake")
+    def test_category_detail_view_status_code(self):
+            response = self.client.get(reverse('category_detail', args=[self.category.id]))
+            self.assertEqual(response.status_code, 200)
+            self.assertContains(response, "Cake")
